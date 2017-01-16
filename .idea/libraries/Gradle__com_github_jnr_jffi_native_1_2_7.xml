@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: com.github.jnr:jffi:native:1.2.7">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jffi/1.2.7/jffi-1.2.7-native.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
