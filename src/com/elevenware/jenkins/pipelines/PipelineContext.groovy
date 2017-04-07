@@ -15,6 +15,7 @@ class PipelineContext implements Serializable{
     String priorAppSpec
     int buildNumber
     String gitCommit
+    boolean pr
     String shortCommit
     def platformImplementation
     def chefSteps

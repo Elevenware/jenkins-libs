@@ -1,8 +1,8 @@
 package com.elevenware.jenkins.scripts
 
 import com.elevenware.jenkins.pipelines.PipelineContext
-import com.elevenware.jenkins.pipelines.definitions.ChefSteps
-import com.elevenware.jenkins.pipelines.definitions.KnifeCommands
+import com.elevenware.jenkins.pipelines.helpers.ChefSteps
+import com.elevenware.jenkins.pipelines.helpers.KnifeCommands
 import com.elevenware.jenkins.recording.dsl.DslStub
 import com.elevenware.jenkins.recording.FailedStepException
 import com.elevenware.jenkins.recording.dsl.PipelineRecording

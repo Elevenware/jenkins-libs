@@ -1,7 +1,8 @@
-# jenkins-libs Documentation
+# jenkins-libs Documentation 
 
 This project is an alternative approach to the jenkins-jobdsl project for providing configuration-as-code for Jenkins pipelines.
  
+[confluence page](https://tc-jira.atlassian.net/wiki/display/SHIP/jenkins-libs)
  ## Preamble
  
  The motivation for this project is a desire to remove our dependence on an old, forked verion of the jobdsl plugin, which was holding us back from upgrading, well, anything really. 

@@ -2,6 +2,7 @@ package com.elevenware.jenkins.pipelines.util
 
 import com.elevenware.jenkins.pipelines.definitions.GithubPipelineDefinition
 import com.elevenware.jenkins.pipelines.definitions.SimplePipelineDefinition
+import com.elevenware.jenkins.pipelines.definitions.ChefPipelineDefinition
 
 class PipelineRegistry implements Serializable {
 
@@ -10,8 +11,9 @@ class PipelineRegistry implements Serializable {
     private registry = [:]
 
     private PipelineRegistry() {
-        registry['githubflow'] = GithubPipelineDefinition
         registry['simplePipeline'] = SimplePipelineDefinition
+        registry['githubflow'] = GithubPipelineDefinition
+        registry['chefflow'] = ChefPipelineDefinition
     }
 
     static PipelineRegistry getInstance() {

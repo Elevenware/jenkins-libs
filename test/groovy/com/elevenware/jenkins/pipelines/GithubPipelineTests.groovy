@@ -1,9 +1,9 @@
 package com.elevenware.jenkins.pipelines
 
 import com.elevenware.jenkins.matchers.ArgumentCapture
-import com.elevenware.jenkins.pipelines.definitions.CommonShellCommands
+
 import com.elevenware.jenkins.pipelines.definitions.GithubPipelineDefinition
-import com.elevenware.jenkins.pipelines.definitions.KnifeCommands
+import com.elevenware.jenkins.pipelines.helpers.KnifeCommands
 import com.elevenware.jenkins.recording.dsl.PipelineRecording
 import com.elevenware.jenkins.recording.dsl.StageModel
 import org.junit.Before
@@ -61,7 +61,7 @@ class GithubPipelineTests {
 
         assertThat(stageModel, hadInvocation("git").withArgs(captureTo(capture)))
         assertThat(stageModel, hadInvocation("dir").withArgs('cookbook', isA(Closure)))
-        assertThat(stageModel, hadInvocation('sh').withArgs(CommonShellCommands.GEM_INSTALL.code))
+        assertThat(stageModel, hadInvocation('sh').withArgs(KnifeCommands.CommonShellCommands.GEM_INSTALL.code))
 
         assertThat(stageModel, hadInvocation('echo').withArgs("Pinning basic-app to version basic-app@1.0.1 in environment ${env}"))
 

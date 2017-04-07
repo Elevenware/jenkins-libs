@@ -1,7 +1,11 @@
 package com.elevenware.jenkins.pipelines.util
 
+import com.elevenware.jenkins.pipelines.platforms.DotNETPlatform
+import com.elevenware.jenkins.pipelines.platforms.NodeJSPlatform
+import com.elevenware.jenkins.pipelines.platforms.PHPPlatform
 import com.elevenware.jenkins.pipelines.platforms.SimplePlatform
 import com.elevenware.jenkins.pipelines.platforms.MavenPlatform
+import com.elevenware.jenkins.pipelines.platforms.ChefPlatform
 
 class PlatformRegistry implements Serializable {
 
@@ -10,8 +14,12 @@ class PlatformRegistry implements Serializable {
     private def registry = [:]
 
     private PlatformRegistry() {
-        registry['maven'] = MavenPlatform
         registry['simple'] = SimplePlatform
+        registry['maven'] = MavenPlatform
+        registry['nodejs'] = NodeJSPlatform
+        registry['php'] = PHPPlatform
+        registry['dotnet'] = DotNETPlatform
+        registry['chef'] = ChefPlatform
     }
 
     static PlatformRegistry getInstance() {

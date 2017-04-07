@@ -1,14 +1,14 @@
-package com.elevenware.jenkins.pipelines.definitions
+package com.elevenware.jenkins.pipelines.helpers
 
 import com.cloudbees.groovy.cps.NonCPS
 import com.elevenware.jenkins.pipelines.PipelineContext
-import groovy.json.JsonSlurper
+import com.elevenware.jenkins.pipelines.helpers.KnifeCommands
 
 def installChefDependencies(PipelineContext ctx) {
     echo'Installing cookbook dependencies'
     sh 'ls'
     dir("${ctx.cookbookDir}") {
-        sh CommonShellCommands.GEM_INSTALL.code
+        sh KnifeCommands.CommonShellCommands.GEM_INSTALL.code
     }
 }
 

@@ -7,15 +7,15 @@ def run(PipelineContext context) {
     String name = context.appName
     stage("build $name") {
         node {
-        echo "Running build stage for ${context.appName}"
-        withMaven {
+            echo "Running build stage for ${context.appName}"
+            withMaven {
 
-        }
+            }
         }
     }
     stage("deploy $name") {
         node {
-        echo "Running deploy stage for ${context.appName}"
+            echo "Running deploy stage for ${context.appName}"
         }
     }
 
